@@ -85,7 +85,6 @@ class CampaignMonitorPrivate
 
 	def get_list_id_for(list_name)
 		set_active_customer unless @active_customer
-		raise Error, "No active customer" unless @active_customer
 
 		return @list_cache[@active_customer][list_name] if @list_cache.key? @active_customer
 
