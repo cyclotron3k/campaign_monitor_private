@@ -2,6 +2,8 @@
 
 The Campaign Monitor website and the Campaign Monitor API use entirely independent IDs to reference your data. This gem helps reconcile the two worlds.
 
+This software is an unofficial client for the private Campaign Monitor API, and is not endorsed by Campaign Monitor. Future updates to Campaign Monitor's website could possibly break the functionality of this library without warning.
+
 Please read this whole document before using this gem, especially the sections on **Stability** and **Security and Permissions**
 
 ## Installation
@@ -92,7 +94,7 @@ client = CampaignMonitorPrivate.new(
 
 **NOTE:** The client will not attempt login until you try to retrieve data from Campaign Monitor. So if you instantiate `CampaignMonitorPrivate` with a 2FA token, but then don't use it for some time; the token may have expired. To avoid this scenario, you can call `client.login` immediately after instantiation to force login.
 
-There should be no scenario where you're providing a token and a secret, but if you do, the token will be used. `CampaignMonitorPrivate` will not try to generate one for you using the secret.
+There should be no scenario where you're providing a token and a secret, but if you do, the token will be used and `CampaignMonitorPrivate` will not try to generate one for you using the secret.
 
 ## Environment Variables
 
