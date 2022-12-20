@@ -1,5 +1,7 @@
 # CampaignMonitorPrivate
 
+> **ARCHIVED** This repo has been archived since Campaign Monitor changed their log-in process to depend on JavaScript. Mechanize doesn't execute JavaScript, so a complete rewrite with something a lot more heavyweight (e.g. Selenium) would be necessary.
+
 The Campaign Monitor website and the Campaign Monitor API use entirely independent IDs to reference your data. This gem helps reconcile the two worlds.
 
 This software is an unofficial client for the private Campaign Monitor API, and is not endorsed by Campaign Monitor. Future updates to Campaign Monitor's website could possibly break the functionality of this library without warning.
